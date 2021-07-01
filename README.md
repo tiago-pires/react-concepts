@@ -1,39 +1,24 @@
-# Props Children
-
-Pass children nodes to another component to act as parent.
-Bellow we can pass nodes to `<List>` to be wrapped in `<nav><ul>` later on
+# SVG Icons as React Components
 
 ```javascript
+// import icons as React Components
+import {ReactComponent as BellIcon} from './icons/bell.svg'
+import {ReactComponent as CogIcon} from './icons/cog.svg'
+
 function App() {
    return (
-      <List>
-         <li>one</li>
-         <li>two</li>
-         <li>tree</li>
-      </List>
+      <ul>
+         <li><BellIcon/> Text</li> // use directly
+         <ListItem icon={<CogIcon/>} /> //use component as prop
+      </ul>
    );
 }
 
-function List(props) {
+function ListItem(props) {
    return (
-      <nav>
-         <ul>{props.children}</ul>
-      </nav>
+      <li>{props.icon}</li>
    );
 }
+
+export default App;
 ```
-
-Result
-```html
-<nav>
-   <ul class="App">
-      <li>one</li>
-      <li>two</li>
-      <li>tree</li>
-   </ul>
-</nav>
-```
-
-## Resources
-
-[fireship channel](https://youtu.be/IF6k0uZuypA?t=250)

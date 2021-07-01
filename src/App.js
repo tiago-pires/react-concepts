@@ -1,18 +1,18 @@
+import {ReactComponent as BellIcon} from './icons/bell.svg'
+import {ReactComponent as CogIcon} from './icons/cog.svg'
+
 function App() {
    return (
-      <List>
-         <li>one</li>
-         <li>two</li>
-         <li>tree</li>
-      </List>
+      <ul>
+         <li><BellIcon/> Text</li>
+         <ListItem icon={<CogIcon/>} />
+      </ul>
    );
 }
 
-function List(props) {
+function ListItem(props) {
    return (
-      <nav>
-         <ul>{props.children}</ul>
-      </nav>
+      <li>{props.icon}</li>
    );
 }
 
