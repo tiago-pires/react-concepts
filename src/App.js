@@ -1,21 +1,28 @@
+import { ReactComponent as MessengerIcon } from "./icons/messenger.svg";
+import { ReactComponent as PlusIcon } from "./icons/plus.svg";
+import { ReactComponent as CogIcon } from "./icons/cog.svg";
 
 function App() {
-  return (
-     <Navbar>
-        <li>one</li>
-        <li>two</li>
-        <li>tree</li>
-     </Navbar>
-  );
+   return (
+      <Navbar>
+         <NavItem icon={<MessengerIcon />} />
+         <NavItem icon={<PlusIcon />} />
+         <NavItem icon={<CogIcon />} />
+      </Navbar>
+   );
 }
 
-function Navbar(props){
+function NavItem(props) {
+   return (
+      <li className="nav-item"> {props.icon} </li>
+   );
+}
+
+function Navbar(props) {
    return (
       <nav className="navbar">
-         <ul className="navbar-nav">
-            {props.children}
-         </ul>
+         <ul className="navbar-nav">{props.children}</ul>
       </nav>
-   )
+   );
 }
 export default App;

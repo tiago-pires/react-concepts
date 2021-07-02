@@ -47,3 +47,11 @@ a {
    color: white;
    justify-content: flex-end;
 }
+
+.nav-item {
+   width: calc(var(--nav-size) * .8);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
