@@ -1,4 +1,5 @@
 import { ReactComponent as MessengerIcon } from "./icons/messenger.svg";
+import { ReactComponent as ArrowIcon } from "./icons/arrow.svg";
 import { ReactComponent as ChevronIcon } from "./icons/chevron.svg";
 import { ReactComponent as CogIcon } from "./icons/cog.svg";
 import { ReactComponent as PlusIcon } from "./icons/plus.svg";
