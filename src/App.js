@@ -61,9 +61,11 @@ function DropdownMenu() {
                className="menu-item"
                onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)} 
             >
-               <span className="icon-button">{props.leftIcon}</span>
+               <span className="icon-button icon-left">{props.leftIcon}</span>
                {props.children}
-               <span className="icon-right">{props.rightIcon}</span>
+               {props.rightIcon && 
+                  <span className="icon-right">{props.rightIcon}</span>
+               }
             </a>
          </div>
       );
@@ -83,7 +85,7 @@ function DropdownMenu() {
                   leftIcon={<CogIcon />}
                   rightIcon={<ChevronIcon />}
                   goToMenu="settings"
-               />
+               > Settings</DropdownItem>
             </div>
          </CSSTransition>
 
